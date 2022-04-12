@@ -1,0 +1,69 @@
+   body {
+       margin: 0;
+       box-sizing: border-box;
+       font-size: 2rem;
+       font-family: sans-serif;
+       background-color: black;
+   }
+   
+   .grid-container {
+       background-color: cadetblue;
+       border-radius: 10px;
+       border: solid 2px black;
+   }
+   
+   .grid-item {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: 10px;
+       border: solid 1px black;
+       border-radius: 10px;
+       background-color: cornflowerblue;
+       text-align: center;
+       transition: transform 0.3s ease-in-out;
+   }
+   
+   .grid-item:hover {
+       filter: opacity(0.9);
+       transform: scale(1.03);
+   }
+   /* CSS GRID - GUIA COMPLETA*/
+   
+   .grid-container {
+       min-height: 600px;
+       display: grid;
+       /*   grid-template-columns: 200px 1fr;
+       grid-template-rows: 150px 200px 150px; */
+       /* grid-template: 150px 200px 150px / 200px 1fr;
+       grid-template-areas: "header header" "sidebar main" "footer footer"; */
+       grid-template: "header header"150px "sidebar main"200px "footer footer"150px / 200px 1fr;
+       /* grid-auto-rows: 150px; */
+       grid-auto-flow: row dense;
+       /*grid-auto-flow: column;
+       grid-auto-columns: 200px; */
+       gap: 10px;
+       padding: 10px;
+       /*align-items: center;
+       justify-items: end; */
+       /* place-items: center; */
+       /*  align-content: space-evenly;
+       justify-content: space-evenly; */
+       place-content: stretch;
+   }
+   
+   .header {
+       grid-area: header;
+   }
+   
+   .sidebar {
+       grid-area: sidebar;
+   }
+   
+   .main {
+       grid-area: main;
+   }
+   
+   .footer {
+       grid-area: footer;
+   }

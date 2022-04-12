@@ -1,0 +1,60 @@
+  body {
+      font-size: 4rem;
+      font-family: sans-serif;
+      border-color: black;
+  }
+  
+  .flex-container {
+      background-color: cadetblue;
+      border-radius: 10px;
+      /* border: solid 2px yellow;  */
+  }
+  
+  .flex-container>* {
+      /*  padding: 10px;
+      margin: 10px;
+      border: solid 1px black;*/
+      border-radius: 10px;
+      background: fuchsia;
+  }
+  
+  .flex-container {
+      height: 500px;
+      display: flex;
+      /*  flex-direction: row;
+    flex-wrap: wrap; */
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      /* align-items: center; */
+      /* align-content: center; */
+  }
+  
+  .one {
+      height: 100px;
+      width: 100px;
+      flex: initial;
+      flex: auto;
+      flex: none;
+      flex: 1;
+      /* flex-basis: auto; */
+      /* order: 3; */
+      /*  align-self: center; */
+  }
+  
+  .two {
+      height: 100px;
+      width: 100px;
+      flex: auto;
+      flex: 2;
+      /*  order: -1; */
+      /* align-self: flex-end; */
+      /* margin-left: auto; */
+      /* Importantisimo en los navbar  */
+  }
+  
+  .three {
+      height: 100px;
+      width: 100px;
+      flex: 1;
+  }
